@@ -21,7 +21,7 @@ class GithubWatcher:
             if latest_pr is not None and latest_pr != self.last_checked_pr:
                 self.last_checked_pr = latest_pr
                 print(f"New PR found: {latest_pr.title}")
-                diffs = '\n'.join([file.patch for file in latest_pr.get_files()])
+                diffs = '\n'.join([file.patch for file in latest_pr.get_files() if isinstance(file.patch, str)])
                 review = self.reviewer.review_code(diffs)
                 print("Commenting on PR...")
                 latest_pr.create_issue_comment(review)  # post the review as a comment
