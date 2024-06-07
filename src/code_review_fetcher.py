@@ -1,7 +1,7 @@
 from openai import OpenAI, OpenAIError
 
 
-class CodeReviewer:
+class GithubCodeReviewer:
     """
     Class responsible for reviewing code using OpenAI.
     """
