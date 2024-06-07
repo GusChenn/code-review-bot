@@ -1,0 +1,7 @@
+{
+  "include": ["src/**/*.py"],
+  "exclude": ["src/__pycache__/**/*"],
+  "pythonPath": "./venv/bin/python",
+  "venvPath": "./venv/",
+  "venv": "venv"
+}
